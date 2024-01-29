@@ -1,18 +1,35 @@
 
 body {
-    width: 98%;
+    position: relative;
+    height: auto;
+    width: auto;
     font-family: sans-serif, Arial, serif;
     font-size: x-large;
+    background-position-y: 1.5em;
+    background-position-x: center;
     background-image: url("files/cloudy-fullmoon.JPG");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-color: black;
+}
+
+.page-container {
+  position: relative;
+  min-height: 90vh;
+}
+
+.main-content-body {
+  min-height: calc(100vh - 6.4em);
+  max-height: max-content;
+  width: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 div {
     display: block;
     text-align: left;
-    size: auto;    
+    height: auto;    
 }
 
 a {
@@ -24,7 +41,8 @@ a {
     margin-top: 1em;
     overflow: hidden;
     padding: .5em;
-    width: 95%;
+    width: auto;
+    max-width: max-content;
     font-size: 2em;    
     color: white;
     text-decoration: underline;
@@ -33,53 +51,51 @@ a {
 }
 
 .content {
-    float: left;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
     margin: 1em;
     padding: 1em;
     background-color: rgba(250, 230, 255, .6);
     opacity: 1;
     border-radius: 1em;
-    size: auto;
-    min-width: 300px;
-    max-width: 1200px;
+    height: auto;
+    width: auto;
+    min-width: fit-content;
+    max-width: max-content;
 }
 
 .content-title {
     float: left;
-    margin: 10px 10px 0px 10px;
+    margin: 0px 10px 0px 0px;
     padding: 10px;
-    width: 95%;
+    width: auto;
     font-size: 1.5em;
     color: black;
     text-decoration: underline;
     font-style: italic;
     font-weight: bold;
-    
 }
-
-.content-image {
-    float: left;
-    margin: 10px;
-    padding: 10px;
-    border: solid black 2px;
-    size: auto;
-    background-color: #333;
-    opacity: 1;
-}
-
 
 .content-text {
     float: left;
-    margin: 0px 10px 10px 10px;
+    margin: 0px 10px 0px 0px;
     padding: 10px;
     font-size: 1em;
     color: black;
-    width: 95%;
+    width: auto;
 }
 
+.content-image {
+  float: left;
+  margin: 0px 10px 0px 0px;
+  width: fit-content;
+  opacity: 1;   
+}
 
 .gallery {
     display: inline-grid;
+    width: fit-content;
     margin: 10px;
     border: 2px solid #333;
     max-height: 600px;
@@ -119,16 +135,49 @@ a {
 
 /* The navigation menu */
 .navbar {
+  width: 100vw;
+  min-height: 2.5em;
   overflow: hidden;
   background-color: #333;
-  margin-bottom: 1em;
-  font-size: x-large;
+  margin-bottom: .5em;
+  font-size: 1em;
+}
+
+.bar-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;  
+}
+.mobile-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 750px) {
+  .bar-menu {
+    display: none;
+  } 
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 2.5em;
+    width: max-content;
+  }
+  .subnav-content {
+    max-width: fit-content;
+  }
+  .subnav-content a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+  }
+  
 }
 
 /* Navigation links */
 .navbar a {
-  float: left;
-  font-size: x-large;
+  font-size: 1em;
   color: white;
   text-align: center;
   padding: 14px 16px;
@@ -137,13 +186,12 @@ a {
 
 /* The subnavigation menu */
 .subnav {
-  float: left;
   overflow: hidden;
 }
 
 /* Subnav button */
 .subnav .subnavbtn {
-  font-size: x-large; 
+  font-size: 1em; 
   border: none;
   outline: none;
   color: white;
@@ -154,7 +202,13 @@ a {
 }
 
 /* Add a purple background color to navigation links on hover */
-.navbar a:hover, .subnav:hover .subnavbtn {
+.navbar a:hover {
+  height: 1.5em;
+  background-color: purple;
+  text-decoration: underline;
+}
+
+.navbar .subnav:hover .subnavbtn {
   background-color: purple;
 }
 
@@ -163,6 +217,7 @@ a {
   display: none;
   position: absolute;
   left: 0;
+  padding: 14px 16px;
   background-color: purple;
   width: 100%;
   z-index: 1;
@@ -170,18 +225,41 @@ a {
 
 /* Style the subnav links */
 .subnav-content a {
-  float: left;
   color: white;
   text-decoration: none;
 }
 
-/* Add a grey background color on hover */
+/* Add a background color on hover */
 .subnav-content a:hover {
   background-color: #423;
   color: white;
+  text-decoration: underline;
 }
 
 /* When you move the mouse over the subnav container, open the subnav content */
 .subnav:hover .subnav-content {
   display: block;
+}
+
+
+/* The footer */
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 100vw;
+  height: 2.5em;
+  position: relative;
+  bottom: 0;
+  overflow: hidden;
+  background-color: #333;
+  color: white;
+}
+
+.footer-text {
+  text-align: center;
+  padding: 5px;
+  font-size: 1em;
+  font-style: italic;
+  color: white;
 }

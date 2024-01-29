@@ -1,70 +1,84 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" type="text/css" href="includes/main.css">
         <link rel="icon" type="image/x-icon" href="includes/favicon.ico">
-        <script type="module" src="NavBar.js"></script>
+        <script type="module" src="includes/includes.js"></script>
         <title>Favorites</title>
     </head>
 
 <body>
- 
-<!-- The navigation menu -->
-<div class="navbar" id="navbar">
+<div class="page-container">
     
-</div>
-
-
-<!-- main content -->
-
-<div class="body-title">My Favorite Projects</div>
-
-
-<div class="content">
-    <div class="content-title">My Connect 4 App</div>
-    <div class="content-text">This is my first React Native app with web hosting on GitHub Pages. 
-        <p> Initially this started as just a CodeWars kata challenge while I was learning PHP. </p>
-        <p> I later updated it to Javascript and built the simple user interface with React Native.</p>
+    <!-- The navigation menu -->
+    <div class="navbar" id="navbar">
+        
     </div>
-    <div class="gallery"> 
-        <a target="_blank" href="https://cltacker13.github.io/theconnect4app/">
-            <img src="includes/files/theConnect4App-Welcome.png" alt="theConnect4App welcome"> 
-        </a> 
-        <div class="image-desc">theConnect4App</div>
+
+    <!-- main content body -->
+    <div class="main-content-body">
+
+        <div class="body-title">My Favorite Projects</div>
+
+        <div class="content">
+            <div class="content-title">My Connect 4 App</div>
+            <div class="content-text">This is my first React Native app with web hosting on GitHub Pages. 
+                <p> Initially this started as just a CodeWars kata challenge while I was learning PHP. </p>
+                <p> I later updated it to Javascript and built the simple user interface with React Native.</p>
+            </div>
+            <div class="content-image">
+                <div class="gallery"> 
+                    <a target="_blank" href="https://cltacker13.github.io/theconnect4app/">
+                        <img src="includes/files/theConnect4App-Welcome.png" alt="theConnect4App welcome"> 
+                    </a> 
+                    <div class="image-desc">theConnect4App</div>
+                </div>
+            </div> 
+        </div>
+
+
+        <div class="content">
+            <div class="content-title">Yogi-Go, Inc.</div>
+            <div class="content-text">I co-founded Yogi-Go, Inc. 
+                <p> With my partners, we created a software as a service business to connect Yoga Instructors and Personal Trainers with clients looking for one-on-one services. </p>
+                <p> I collaborated with the design and developer teams to create the Yogi-Go Fitness crossplatform mobile application.</p></div>
+            <div class="content-image">
+                <div class="gallery"> 
+                    <a target="_blank" href="includes/files/yogi-go-home.png">
+                        <img src="includes/files/yogi-go-home.png" alt="yogi-go fitness home"> 
+                    </a> 
+                    <div class="image-desc">Yogi-Go Fitness User Home Screen</div>
+                </div>
+                <div class="gallery"> 
+                    <a target="_blank" href="includes/files/yogi-go-trainerbooking.png">
+                        <img src="includes/files/yogi-go-trainerbooking.png" alt="yogi-go fitness yogi booking"> 
+                    </a> 
+                    <div class="image-desc">Yogi-Go Fitness Booking an Instructor</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content">
+            <div class="content-title">History Classes</div>
+            <div class="content-text">I focused on Ancient Greco-Roman History. 
+                <p> I enjoyed the art and cultural aspects.</p>
+                <p> As well as tried to contribute to interpreting the history.</p></div>
+            <div class="content-image">
+                <div class="gallery"> <a target="_blank" href="includes/files/venus-statue-essay.pdf"><img src="includes/files/venus-statue.png" alt="venus statue"> </a> <div class="image-desc">Museum Research Project on Displayed Venus Statue</div></div>
+                <div class="gallery"> <a target="_blank" href="includes/files/submitted-herodotus-final.pdf"><img src="includes/files/herodotus-book.jpg" alt="herotodus book"> </a> <div class="image-desc">Seminar Thesis Paper on Histories by Herodotus</div></div>
+            </div>
+        </div>
     </div>
-</div>
 
-
-<div class="content">
-    <div class="content-title">Yogi-Go, Inc.</div>
-    <div class="content-text">I co-founded Yogi-Go, Inc. 
-        <p> With my partners, we created a software as a service business to connect Yoga Instructors and Personal Trainers with clients looking for one-on-one services. </p>
-        <p> I collaborated with the design and developer teams to create the Yogi-Go Fitness crossplatform mobile application.</p></div>
-    <div class="gallery"> 
-        <a target="_blank" href="includes/files/yogi-go-home.png">
-            <img src="includes/files/yogi-go-home.png" alt="yogi-go fitness home"> 
-        </a> 
-        <div class="image-desc">Yogi-Go Fitness User Home Screen</div>
+    <!-- The footer -->
+    <div class="footer" id="footer">
+        
     </div>
-    <div class="gallery"> 
-        <a target="_blank" href="includes/files/yogi-go-trainerbooking.png">
-            <img src="includes/files/yogi-go-trainerbooking.png" alt="yogi-go fitness yogi booking"> 
-        </a> 
-        <div class="image-desc">Yogi-Go Fitness Booking an Instructor</div>
-    </div>
+
 </div>
-
-
-<div class="content">
-    <div class="content-title">History Classes</div>
-    <div class="content-text">I focused on Ancient Greco-Roman History. 
-        <p> I enjoyed the art and cultural aspects.</p>
-        <p> As well as tried to contribute to interpreting the history.</p></div>
-    <div class="gallery"> <a target="_blank" href="includes/files/venus-statue-essay.pdf"><img src="includes/files/venus-statue.png" alt="venus statue"> </a> <div class="image-desc">Museum Research Project on Displayed Venus Statue</div></div>
-    <div class="gallery"> <a target="_blank" href="includes/files/submitted-herodotus-final.pdf"><img src="includes/files/herodotus-book.jpg" alt="herotodus book"> </a> <div class="image-desc">Seminar Thesis Paper on Histories by Herodotus</div></div>
-</div>
-
 </body>
 
 </html>
